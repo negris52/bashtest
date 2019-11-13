@@ -1,10 +1,9 @@
 #!/bin/bash
 
-filenames=(
-"$1"
-"$2"
-"$3"
-"$4")
+filenames=()
+for item in "$@"; do
+  filenames+=("$item")
+done
 
 for f in "${filenames[@]}"
 do
