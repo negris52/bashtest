@@ -1,10 +1,10 @@
 #!/bin/bash
 
 filenames=(
-"foo"
-"bar"
-"baz"
-"quux")
+"$1"
+"$2"
+"$3"
+"$4")
 
 for f in "${filenames[@]}"
 do
