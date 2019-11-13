@@ -8,7 +8,8 @@ filenames=(
 
 for f in "${filenames[@]}"
 do
+  rm $f
   touch $f
   chmod 640 $f
-  echo $(date +"%T %d-%m-%y") >> $f
+  echo -e $(date +"%T %d-%m-%y\c") >> $f
 done
