@@ -1,17 +1,11 @@
 #!/bin/bash
 
-filenames=()
 for item in "$@"; do
-  filenames+=("$item")
-done
-
-for f in "${filenames[@]}"
-do
-  if [ -f $f ];
+  if [ -f $item ];
     then
-      mv $f $f.bak
+      mv $item $item.bak
   fi
-  touch $f
-  chmod 640 $f
-  echo -e $(date +"%T %d-%m-%y\c") >> $f
+  touch $item
+  chmod 640 $item
+  echo -e $(date +"%T %d-%m-%y\c") >> $item
 done
